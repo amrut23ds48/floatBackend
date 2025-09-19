@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Environment
+.env
+venv/
+.venv/
+
+# VSCode
+.vscode/
+
+# Output / Data
+output/
+*.json
+*.accdb
+*.mdb
+
+# Checkpoints
+chroma_upload_checkpoint.txt
+
+# OS files
+.DS_Store
+Thumbs.db
