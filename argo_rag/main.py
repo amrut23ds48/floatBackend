@@ -7,7 +7,7 @@ from psycopg2.extras import RealDictCursor
 from argo_rag.mcpServer import ask_llm
 from argo_rag.src.query_rag import rag_query
 from fastapi.middleware.cors import CORSMiddleware
-load_dotenv()
+load_dotenv(dotenv_path=".env" override=True)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 DATABASE_URI = os.getenv("DATABASE_URI")
 
