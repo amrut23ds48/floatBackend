@@ -36,7 +36,7 @@ def ask_llm(question: str):
     sql_response = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "You are an expert SQL assistant. only Generate a SELECT query for the argo_observations table and nothing else."},
+            {"role": "system", "content": "You are an expert SQL assistant. only Generate a SELECT query for the argo_observations table and nothing else.keep in mind if question mentions month or year or date or float id, argo id you can find it in ad_observation_id column which has entries like this 1900042_04/01/2004. so extract id and date accordingly."},
             {"role": "user", "content": f"Write a SQL query to answer: {question}."}
         ]
     )
